@@ -199,7 +199,7 @@ body{
 .target::before{
     position: absolute;
     content: '';
-    top: 40%;
+    top: 42%;
     display: inline-block;
     border-top:0.5px solid #827d81;
     border-radius: 1px;
