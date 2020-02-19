@@ -251,18 +251,21 @@ body{
     background: url(images/info_icon.png) center no-repeat;
     background-size: cover;
     left: -12%;
-    -webkit-transform: translateY(-20%);
-            transform: translateY(-20%);
+    -webkit-transform: translateY(-15%);
+            transform: translateY(-15%);
 }
 
 @media (max-width: 600px) {
     .container{
         transform: scale(0.8);
     }
+    .box__note::before{
+        -webkit-transform: translate(10%, -10%);
+                transform: translate(10%, -10%);
+}
 }
 /* 1. Увеличить шрифт на 30%
-2. Съехало изображение в блоке "note"
-3. */
+2. Съехало изображение в блоке "note" */
 @media (max-width: 480px) {
     .indicator__title,.note__text{
         font-size: 2rem;
@@ -276,10 +279,13 @@ body{
     .container{
         transform: scale(0.6);
     }
+    .box__note::before{
+        -webkit-transform: translate(50%, -10%);
+                transform: translate(50%, -10%);
+    }
 }
 /* 1. Увеличить шрифт на 10% относительно пред.
-2. Съехало изображение в блоке "note"
-3. */
+2. Съехало изображение в блоке "note" */
 @media (max-width: 360px) {
     .indicator__title,.note__text{
         font-size: 2.2rem;
@@ -293,11 +299,17 @@ body{
     .container{
         transform: scale(0.5);
     }
+    .box__note::before{
+        -webkit-transform: translate(55%, 0%);
+                transform: translate(55%, 0%);
+    }   
 }
 @media (max-width: 300px) {
     .container{
         transform: scale(0.4);
     }
+    .box__note::before{
+        -webkit-transform: translate(55%, -5%);
+                transform: translate(55%, -5%);
+    }
 }
-
-
