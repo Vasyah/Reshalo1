@@ -25,23 +25,22 @@ body{
     height: 100vh;
     
 }
-
+/* wrapper start */
 .container{
-    min-height: 300px;
-    max-height: 300px;
+    min-height: 250px;
+    max-height: 270px;
     min-width: 575px;
     width: 30%;
-    height: 40%;
+    height: 27%; 
     display: -webkit-box;
     display: flex;
-    -webkit-box-pack: center;
-            justify-content: center;
+    -webkit-box-pack: stretch;
+            justify-content: stretch;
     -webkit-box-align: center;
             align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
             flex-direction: column;
-
 }
 .body__container{
     border: 0.5px solid #666666;
@@ -51,39 +50,34 @@ body{
     border-radius: 2%/5%;
     overflow: hidden;
     margin: 6rem;
-
 }
+/* wrapper end */
+
 /* heading start  */
 .heading{
     width: 100%;
-    max-height: 60px;
     /* блок занимает 20% места по высоте */
-    -webkit-box-flex:1;
-            flex:1
+    -webkit-box-flex:2 1 20%;
+            flex:1 1 20%;
 }
 .container__heading{
-    position: relative;
+    /* position: relative; */
     text-align: left;
     background-color: #494949;
     color: #fff;
     font-size: 1.8rem;
 }
 .heading__text{
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    margin-left: 21px;
+    margin: 3%;
 }
 /* heading end */
 
 /* content start */
 .content{
-    
     width: 100%;
     /* блок занимает 80% места по высоте */
-    -webkit-box-flex: 4;
-            flex: 4; 
+    -webkit-box-flex: 4 1 80%;
+            flex: 4 1 80%; 
     display: -webkit-box; 
     display: flex;
     -webkit-box-pack: center;
@@ -113,6 +107,7 @@ body{
     border: 0.5px solid #dfddde;
     color: #66615e;   
 }
+/* content end */
 
 /* indicator start */
 .indicator{
@@ -127,12 +122,10 @@ body{
 .indicator__title{
     font-size: 1.5rem;
     letter-spacing: 0.05em;
-
 }
 .bar{
     width: 48%;
     height: 25%;
-    
 }
 .indicator__bar{
     background-color: #cdcdcd;
@@ -141,8 +134,7 @@ body{
     display: flex;
     -webkit-box-align: center;
             align-items: center;
-    margin-right: 0px;
-    
+    margin-right: 0px;  
 }
 .indicator_status-bar{
     position: relative;
@@ -150,8 +142,7 @@ body{
     height: 56%;
     background-color: #0488d0;
     border: 0.5px solid #4a9ecc;
-    margin-left: 5px;
-    
+    margin-left: 5px;  
 }
 .indicator_status-bar::before, ::after{
     position: absolute;
@@ -229,9 +220,6 @@ body{
      #908c8d, #888689, #7e7c7f,
      #7a787b, #727176, #717075);
 }
-
-
-
 /* indicator end */
 
 /* note start */
@@ -254,7 +242,9 @@ body{
     -webkit-transform: translateY(-15%);
             transform: translateY(-15%);
 }
+/* note end */
 
+/* media start */
 @media (max-width: 600px) {
     .container{
         transform: scale(0.8);
@@ -312,4 +302,11 @@ body{
         -webkit-transform: translate(55%, -5%);
                 transform: translate(55%, -5%);
     }
+    .heading{
+        max-height: 60px;
+    }
+    .content{
+        max-height: 190px;
+    }
 }
+/* media end */
